@@ -13,12 +13,15 @@ namespace Triangle_Kaarma
         public double c; // Третья сторона 
         public double h; // Высота *не знаю, будет ли работать, так уж просто так добавил ради ЭКСПЕРЕМЕНТА!
 
-        public Triangle(double A, double B, double C, double H) // Конструктор 
+        public Triangle(double A, double B, double C, double H) // Конструктор, который позволит сделать произвольную высоту и стороны 
         {
             a = A;
             b = B;  // Создаем с заданными длинами сторон согласно заданию 
             b = C;
             h = H;
+        }
+        public Triangle() // Конструктор, создаст без указания переменов
+        {
         }
         public string outputA() // Выводим сторону а
         {
@@ -48,7 +51,6 @@ namespace Triangle_Kaarma
             s = Math.Sqrt((p * (p - a) * (p - b) - (p - c))); // Формула
             return s; // Выводим площадь 
         }
-        
         // В связи с тем, что я не сделал свои конструкторы и не особо понял, как сделать их так уж нашел в Интернете некоторые примеры и решил их взять
         public double Halfperimeter() // Для вычисление высоты мы разделяем на половину периметра
         {
