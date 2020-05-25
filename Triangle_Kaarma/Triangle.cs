@@ -32,9 +32,7 @@ namespace Triangle_Kaarma
         {
             return Convert.ToString(c); // c - Ссылка на внутреннее поле объекта класса 
         }
-        public string outputH() // Выводим сторону h
-        {
-            return Convert.ToString(h); // h - Ссылка на внутреннее поле объекта класса 
+
         }
         public double Perimeter() // Сумма всех сторон типа double
         {
@@ -42,47 +40,48 @@ namespace Triangle_Kaarma
             p = a + b + c; // Формула периметра
             return p; // Выводим
         }
-        public double Surface() // Альтернативный способ вычисления периметра
+        public double Surface() // Альтернативный способ вычисление периметра и вычисление площади
         {
             double s = 0;
             double p = 0;
             p = (a + b + c) / 2; // Формула
             s = Math.Sqrt((p * (p - a) * (p - b) - (p - c))); // Формула
-            return s; // Выводим
+            return s; // Выводим площадь 
         }
-        public double Area() // Вычисление площади 
+        
+        // В связи с тем, что я не сделал свои конструкторы и не особо понял, как сделать их так уж нашел в Интернете некоторые примеры и решил их взять
+        public double Halfperimeter() // Для вычисление высоты мы разделяем на половину периметра
         {
-            double s = 0;
-            s = (a * h) / 2; // Формула 
-            return s; // Выводим
+            return Perimeter() / 2; // Формула
         }
-        public double GetSetA // Свойство позволяющее установить либо изменить сторону/высоту
+        public double Height () // Вычисление высоты 
+        {
+            double p = Halfperimeter(); 
+            double h = 2 * Math.Sqrt(p * (p - a) * (p - b) * (p - c)) / a; // Формула 
+            return h; // Выводим высоту
+        }
+        public double GetSetA // Свойство позволяющее установить либо изменить сторону
         {
             get
             { return a; }
             set
             { a = value; }
         }
-        public double GetSetB // Свойство позволяющее установить либо изменить сторону/высоту
+        public double GetSetB // Свойство позволяющее установить либо изменить сторону
         {
             get
             { return b; }
             set
             { b = value; }
         }
-        public double GetSetC // Свойство позволяющее установить либо изменить сторону/высоту
+        public double GetSetC // Свойство позволяющее установить либо изменить сторону
         {
             get
             { return c; }
             set
             { c = value; }
         }
-        public double GetSetH // Свойство позволяющее установить либо изменить сторону/высоту
-        {
-            get
-            { return h; }
-            set
-            { h = value; }
+
         }
         public bool ExistTriangle // Свойство позволяющее установить, существует ли треугольник с заданными сторонами
         {
