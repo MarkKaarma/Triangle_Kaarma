@@ -13,10 +13,16 @@ namespace Triangle_Kaarma
         public double c; // Третья сторона 
         public double h; // Высота *не знаю, будет ли работать, так уж просто так добавил ради ЭКСПЕРЕМЕНТА!
 
+        public Triangle(double A, double B, double C) // Обычный треугольник
+        {
+            a = A;
+            b = B;
+            c = C;
+        }
         public Triangle(double A, double B, double C, double H) // Конструктор, который позволит сделать произвольную высоту и стороны 
         {
             a = A;
-            b = B;  // Создаем с заданными длинами сторон согласно заданию 
+            b = B;  // Создаем с заданными длинами сторон и высоты согласно заданию 
             b = C;
             h = H;
         }
