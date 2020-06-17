@@ -10,8 +10,9 @@
 
 namespace Triangle_Kaarma.Properties {
     using System;
-    
-    
+    using System.Drawing;
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -23,7 +24,8 @@ namespace Triangle_Kaarma.Properties {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
-        
+        internal static Image raznostor;
+        internal static Image ravnobed;
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
@@ -66,6 +68,26 @@ namespace Triangle_Kaarma.Properties {
         internal static System.Drawing.Bitmap PF_ETR6 {
             get {
                 object obj = ResourceManager.GetObject("PF-ETR6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap PF_ETR61 {
+            get {
+                object obj = ResourceManager.GetObject("PF-ETR61", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ranvostor {
+            get {
+                object obj = ResourceManager.GetObject("ranvostor", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
