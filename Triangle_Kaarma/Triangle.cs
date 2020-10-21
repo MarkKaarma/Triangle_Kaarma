@@ -8,6 +8,7 @@ namespace Triangle_Kaarma
 {
     class Triangle
     {
+        // http://cossincalc.com/
         public double a; // Первая сторона
         public double b; // Вторая сторона
         public double c; // Третья сторона 
@@ -26,6 +27,7 @@ namespace Triangle_Kaarma
             c = C;
             h = H;
         }
+        
         public Triangle() // Конструктор, создаст без указания переменов
         {
         }
