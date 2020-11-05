@@ -139,6 +139,9 @@ namespace Triangle_Kaarma
                 listView1.Items[0].SubItems.Add(triangle.outputA());
                 listView1.Items[1].SubItems.Add(triangle.outputB());
                 listView1.Items[2].SubItems.Add(triangle.outputC());
+                listView1.Items[3].SubItems.Add(Convert.ToString(triangle.Alpha()));
+                listView1.Items[4].SubItems.Add(Convert.ToString(triangle.Beta()));
+                listView1.Items[5].SubItems.Add(Convert.ToString(triangle.Gamma()));
                 listView1.Items[6].SubItems.Add(Convert.ToString(triangle.Height())); // Выводим высоту 
                 listView1.Items[7].SubItems.Add(Convert.ToString(triangle.Perimeter())); // Выводим периметр 
                 listView1.Items[8].SubItems.Add(Convert.ToString(triangle.Surface())); // Выводим площадь
@@ -149,7 +152,5 @@ namespace Triangle_Kaarma
                 else listView1.Items[9].SubItems.Add("Не существует");
             }
         }
-
-        
     }
 }

@@ -12,7 +12,9 @@ namespace Triangle_Kaarma
         public double a; // Первая сторона
         public double b; // Вторая сторона
         public double c; // Третья сторона 
-        public double h; // Высота *не знаю, будет ли работать, так уж просто так добавил ради ЭКСПЕРЕМЕНТА!
+        public double h;
+        /*public double s;
+        public double p;*/
 
         public Triangle(double A, double B, double C) // Обычный треугольник 
         {
@@ -67,6 +69,39 @@ namespace Triangle_Kaarma
             double h = Math.Floor(2 * Math.Sqrt(p * (p - a) * (p - b) * (p - c)) / a);
             return h;
         }
+        public double Alpha() // Формула, которая позволяет найти угол "Альфа"
+        {
+            double al = 0;
+            double ar = 0;
+            double alpha = 0;
+            int s = 2;
+            al = (Math.Pow(a, s) + Math.Pow(c, s) - Math.Pow(b, s)) / (2 * a * c);
+            ar = Math.Acos(Math.Cos(al)) * (180.0 / Math.PI);
+            alpha = Math.Round(ar);
+            return alpha;
+        }
+        public double Beta() // Формула, которая позволяет найти угол "Бета"
+        {
+            double be = 0;
+            double ar = 0;
+            double beta = 0;
+            int s = 2;
+            be = (Math.Pow(a, s) + Math.Pow(b, s) - Math.Pow(c, s)) / (2 * a * b);
+            ar = Math.Acos(Math.Cos(be)) * (180.0 / Math.PI);
+            beta = Math.Round(ar);
+            return beta;
+        }
+        public double Gamma() // Формула, которая позволяет найти угол "Гамма"
+        {
+            double ga = 0;
+            double ar = 0;
+            double gamma = 0;
+            int s = 2;
+            ga = (Math.Pow(b, s) + Math.Pow(c, s) - Math.Pow(a, s)) / (2 * c * b);
+            ar = Math.Acos(Math.Cos(ga)) * (180.0 / Math.PI);
+            gamma = Math.Round(ar);
+            return gamma;
+        }
         public double GetSetA // Свойство позволяющее установить либо изменить сторону
         {
             get
@@ -88,6 +123,20 @@ namespace Triangle_Kaarma
             set
             { c = value; }
         }
+        /*public double GetSetS // Свойство позволяющее установить сторону
+        {
+            get
+            { return s; }
+            set
+            { s = value; }
+        }
+        public double GetSetP // Свойство позволяющее установить сторону
+        {
+            get
+            { return p; }
+            set
+            { p = value; }
+        }*/
 
         public bool ExistTriangle // Свойство позволяющее установить, существует ли треугольник с заданными сторонами
         {

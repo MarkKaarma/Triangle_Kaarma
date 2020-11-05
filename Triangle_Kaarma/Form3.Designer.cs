@@ -30,18 +30,16 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtP = new System.Windows.Forms.TextBox();
-            this.txtS = new System.Windows.Forms.TextBox();
-            this.txtH = new System.Windows.Forms.TextBox();
             this.txtC = new System.Windows.Forms.TextBox();
             this.txtB = new System.Windows.Forms.TextBox();
             this.txtA = new System.Windows.Forms.TextBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.Поле = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button3 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
@@ -50,10 +48,12 @@
             this.checkBox8 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.Поле = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button3 = new System.Windows.Forms.Button();
+            this.txtP = new System.Windows.Forms.TextBox();
+            this.txtS = new System.Windows.Forms.TextBox();
+            this.txtH = new System.Windows.Forms.TextBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +69,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.txtP);
             this.panel1.Controls.Add(this.txtS);
             this.panel1.Controls.Add(this.txtH);
@@ -86,27 +87,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(348, 279);
             this.panel1.TabIndex = 6;
-            // 
-            // txtP
-            // 
-            this.txtP.Location = new System.Drawing.Point(49, 148);
-            this.txtP.Name = "txtP";
-            this.txtP.Size = new System.Drawing.Size(70, 20);
-            this.txtP.TabIndex = 14;
-            // 
-            // txtS
-            // 
-            this.txtS.Location = new System.Drawing.Point(49, 122);
-            this.txtS.Name = "txtS";
-            this.txtS.Size = new System.Drawing.Size(70, 20);
-            this.txtS.TabIndex = 13;
-            // 
-            // txtH
-            // 
-            this.txtH.Location = new System.Drawing.Point(49, 99);
-            this.txtH.Name = "txtH";
-            this.txtH.Size = new System.Drawing.Size(70, 20);
-            this.txtH.TabIndex = 12;
             // 
             // txtC
             // 
@@ -128,45 +108,6 @@
             this.txtA.Name = "txtA";
             this.txtA.Size = new System.Drawing.Size(70, 20);
             this.txtA.TabIndex = 9;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox6.Location = new System.Drawing.Point(7, 148);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(33, 17);
-            this.checkBox6.TabIndex = 8;
-            this.checkBox6.Text = "P";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Checked = true;
-            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox5.Location = new System.Drawing.Point(7, 125);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(33, 17);
-            this.checkBox5.TabIndex = 6;
-            this.checkBox5.Text = "S";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Checked = true;
-            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox4.Location = new System.Drawing.Point(7, 102);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(32, 17);
-            this.checkBox4.TabIndex = 5;
-            this.checkBox4.Text = "h";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -206,6 +147,40 @@
             this.checkBox1.Text = "a";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Поле,
+            this.columnHeader2});
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(358, 2);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(347, 279);
+            this.listView1.TabIndex = 14;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // Поле
+            // 
+            this.Поле.Text = "Поле";
+            this.Поле.Width = 127;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Значение";
+            this.columnHeader2.Width = 116;
+            // 
+            // button3
+            // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
+            this.button3.Location = new System.Drawing.Point(190, 168);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(140, 69);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Вычислить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel2
             // 
@@ -292,46 +267,71 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Найти";
             // 
-            // listView1
+            // txtP
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Поле,
-            this.columnHeader2});
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(358, 2);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(347, 279);
-            this.listView1.TabIndex = 14;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.txtP.Location = new System.Drawing.Point(49, 148);
+            this.txtP.Name = "txtP";
+            this.txtP.Size = new System.Drawing.Size(70, 20);
+            this.txtP.TabIndex = 14;
             // 
-            // Поле
+            // txtS
             // 
-            this.Поле.Text = "Поле";
-            this.Поле.Width = 127;
+            this.txtS.Location = new System.Drawing.Point(49, 122);
+            this.txtS.Name = "txtS";
+            this.txtS.Size = new System.Drawing.Size(70, 20);
+            this.txtS.TabIndex = 13;
             // 
-            // columnHeader2
+            // txtH
             // 
-            this.columnHeader2.Text = "Значение";
-            this.columnHeader2.Width = 116;
+            this.txtH.Location = new System.Drawing.Point(49, 99);
+            this.txtH.Name = "txtH";
+            this.txtH.Size = new System.Drawing.Size(70, 20);
+            this.txtH.TabIndex = 12;
             // 
-            // button3
+            // checkBox4
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(186)));
-            this.button3.Location = new System.Drawing.Point(496, 515);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(140, 69);
-            this.button3.TabIndex = 17;
-            this.button3.Text = "Вычислить";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Location = new System.Drawing.Point(7, 102);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(32, 17);
+            this.checkBox4.TabIndex = 5;
+            this.checkBox4.Text = "h";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Checked = true;
+            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox5.Location = new System.Drawing.Point(7, 125);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(33, 17);
+            this.checkBox5.TabIndex = 6;
+            this.checkBox5.Text = "S";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
+            // 
+            // checkBox6
+            // 
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Checked = true;
+            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox6.Location = new System.Drawing.Point(7, 148);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(33, 17);
+            this.checkBox6.TabIndex = 8;
+            this.checkBox6.Text = "P";
+            this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(763, 665);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -348,29 +348,29 @@
         #endregion
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
         private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtP;
-        private System.Windows.Forms.TextBox txtS;
-        private System.Windows.Forms.TextBox txtH;
         private System.Windows.Forms.TextBox txtC;
         private System.Windows.Forms.TextBox txtB;
         private System.Windows.Forms.TextBox txtA;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader Поле;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox txtP;
+        private System.Windows.Forms.TextBox txtS;
+        private System.Windows.Forms.TextBox txtH;
+        private System.Windows.Forms.CheckBox checkBox6;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.CheckBox checkBox12;
         private System.Windows.Forms.CheckBox checkBox11;
         private System.Windows.Forms.CheckBox checkBox10;
         private System.Windows.Forms.CheckBox checkBox9;
         private System.Windows.Forms.CheckBox checkBox8;
         private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader Поле;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label2;
     }
 }
